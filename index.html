@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Creative Portfolio</title>
+  <meta name="description" content="Personal portfolio: design, media and web experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">YN<span>.</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact" class="btn btn-small">Let's talk</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light / dark theme">◐</button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="eyebrow reveal">Creative · Designer · Developer</p>
+        <h1 class="reveal">
+          Style meets<br />
+          <span class="outline">story</span> &amp;
+          <span class="accent">code.</span>
+        </h1>
+        <p class="lead reveal">
+          I design and build bold digital experiences — from brand visuals to
+          interactive websites — with a sharp eye for detail and a love for good vibes.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#work" class="btn">See my work <span aria-hidden="true">→</span></a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <ul class="stats reveal">
+          <li><strong data-count="40">0</strong><span>Projects</span></li>
+          <li><strong data-count="15">0</strong><span>Happy clients</span></li>
+          <li><strong data-count="4">0</strong><span>Years creating</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-photo reveal" id="tilt">
+        <div class="photo-frame">
+          <img src="images/hero.png" alt="Portrait wearing a green cap and a floral shirt, giving a thumbs-up" />
+          <div class="photo-glow"></div>
+        </div>
+        <div class="badge badge-1"><i></i> Available for work</div>
+        <div class="badge badge-2">Est. 2022 ✦</div>
+        <div class="spin" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><defs><path id="c" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+            <text><textPath href="#c">• design • build • ship • repeat </textPath></text></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="track">
+        <span>UI Design</span><span>✦</span><span>UX Research</span><span>✦</span><span>Branding</span><span>✦</span><span>Web Development</span><span>✦</span><span>Motion</span><span>✦</span>
+        <span>UI Design</span><span>✦</span><span>UX Research</span><span>✦</span><span>Branding</span><span>✦</span><span>Web Development</span><span>✦</span><span>Motion</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="about-img reveal">
+        <img src="images/hero.png" alt="Close-up portrait" />
+      </div>
+      <div class="about-text">
+        <p class="eyebrow reveal">About me</p>
+        <h2 class="reveal">Confident design, <em>relaxed</em> energy.</h2>
+        <p class="reveal">
+          I'm a creative who blends communication, media and technology. I believe a great
+          website should feel like the person behind it — expressive, intentional and easy to use.
+        </p>
+        <p class="reveal">
+          My process starts with people: who they are, what they need, and how they feel.
+          Then I turn that into clean interfaces, thoughtful interactions and fast, accessible code.
+        </p>
+        <div class="skills reveal">
+          <div class="skill"><span>UI / UX Design</span><b style="--w:92%"></b></div>
+          <div class="skill"><span>HTML &amp; CSS</span><b style="--w:95%"></b></div>
+          <div class="skill"><span>JavaScript</span><b style="--w:85%"></b></div>
+          <div class="skill"><span>Graphics &amp; Media</span><b style="--w:90%"></b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="section-head">
+        <p class="eyebrow reveal">Selected work</p>
+        <h2 class="reveal">Projects I'm proud of</h2>
+        <div class="filters reveal" id="filters" role="tablist" aria-label="Filter projects">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="web">Web</button>
+          <button class="chip" data-filter="design">Design</button>
+          <button class="chip" data-filter="app">Apps</button>
+        </div>
+      </div>
+
+      <div class="grid" id="projects">
+        <article class="card reveal" data-cat="web">
+          <div class="thumb t1"><span>01</span></div>
+          <div class="card-body"><h3>Portfolio Experience</h3><p>Interactive personal site with smooth motion.</p><small>Web · 2026</small></div>
+        </article>
+        <article class="card reveal" data-cat="design">
+          <div class="thumb t2"><span>02</span></div>
+          <div class="card-body"><h3>Matchday Posters</h3><p>Bold sports visuals for club social media.</p><small>Design · 2026</small></div>
+        </article>
+        <article class="card reveal" data-cat="app">
+          <div class="thumb t3"><span>03</span></div>
+          <div class="card-body"><h3>Club Manager</h3><p>Dashboard for players, fixtures and records.</p><small>App · 2025</small></div>
+        </article>
+        <article class="card reveal" data-cat="web">
+          <div class="thumb t4"><span>04</span></div>
+          <div class="card-body"><h3>Brand Landing Page</h3><p>Conversion-focused page with clean UX.</p><small>Web · 2025</small></div>
+        </article>
+        <article class="card reveal" data-cat="design">
+          <div class="thumb t5"><span>05</span></div>
+          <div class="card-body"><h3>Identity System</h3><p>Logo, colour and type for a young brand.</p><small>Design · 2025</small></div>
+        </article>
+        <article class="card reveal" data-cat="app">
+          <div class="thumb t6"><span>06</span></div>
+          <div class="card-body"><h3>Records Digitizer</h3><p>Turns paper records into searchable data.</p><small>App · 2024</small></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="section-head">
+        <p class="eyebrow reveal">What I do</p>
+        <h2 class="reveal">Services</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc reveal"><div class="ico">✎</div><h3>UI / UX Design</h3><p>Wireframes, prototypes and polished interfaces built around real users.</p></div>
+        <div class="svc reveal"><div class="ico">&lt;/&gt;</div><h3>Web Development</h3><p>Fast, responsive sites with clean HTML, CSS and JavaScript.</p></div>
+        <div class="svc reveal"><div class="ico">◎</div><h3>Brand &amp; Graphics</h3><p>Logos, posters and social visuals that make people look twice.</p></div>
+        <div class="svc reveal"><div class="ico">▶</div><h3>Media &amp; Content</h3><p>Photo, video and storytelling that fits your voice.</p></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <div class="section-head">
+        <p class="eyebrow reveal">Moodboard</p>
+        <h2 class="reveal">Frames &amp; details</h2>
+      </div>
+      <div class="gallery">
+        <figure class="g g1 reveal"><img src="images/hero.png" alt="Full portrait" loading="lazy" /></figure>
+        <figure class="g g2 reveal"><img src="images/hero.png" alt="Detail: green cap" loading="lazy" /></figure>
+        <figure class="g g3 reveal"><img src="images/hero.png" alt="Detail: floral shirt" loading="lazy" /></figure>
+        <figure class="g g4 reveal"><img src="images/hero.png" alt="Detail: warm lamp" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-card reveal">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let's make something <span class="accent">great</span>.</h2>
+          <p>Have a project, idea or collaboration in mind? Send a message and I'll reply soon.</p>
+          <ul class="links">
+            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="#" aria-label="GitHub">GitHub</a></li>
+          </ul>
+        </div>
+        <form id="contactForm" novalidate>
+          <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
+          <label>Email<input type="email" name="email" placeholder="you@email.com" required /></label>
+          <label>Message<textarea name="message" rows="4" placeholder="Tell me about your project…" required></textarea></label>
+          <button type="submit" class="btn">Send message <span aria-hidden="true">→</span></button>
+          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    <a href="#home" class="to-top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
